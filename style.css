@@ -1,0 +1,459 @@
+:root {
+  --clr-neutral-900: #030303;
+  --clr-neutral-400: #6a6662;
+  --clr-neutral-200: #fff7f0;
+  --clr-neutral-0: #ffffff;
+  --clr-light-red-500: #e16b5b;
+  --clr-galactic-blue-500: #755cde;
+  --clr-summer-yellow-500: #f6a560;
+  --clr-pink-500: #f39e9e;
+  --clr-cyan-500: #61c4b7;
+  --clr-dark-purple-500: #552049;
+  /* Köşe Yuvarlama */
+  --radius-16: 16px;
+  --radius-8: 8px;
+  --radius-full: 999px;
+  --font-size: clamp(2.5rem, 2.4835rem + 0.0706vw, 3.5rem);
+  --font-size-h1: clamp(1.5rem, 1.9898rem + 2.1769vw, 2.5rem);
+  --font-size-h3: 1.125rem;
+  --font-size-base: 1rem;
+  /* !Font family !*/
+  --font-family-Jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: var(--clr-neutral-200);
+  font-family: var(--font-family-Jakarta);
+  padding-block: 2rem 5rem;
+}
+.hero {
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.header button {
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-Jakarta);
+  font-size: var(--font-size-base);
+  border: none;
+  cursor: pointer;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-neutral-0);
+  padding-inline: 2rem;
+}
+.hero-content {
+  text-align: center;
+  max-width: 47rem;
+  margin: 0 auto;
+  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-Jakarta);
+  line-height: 1.5;
+}
+.hero-content p:hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+.hero-content p {
+  font-size: var(--font-size-h3);
+  opacity: 0;
+}
+.hero-content h1 {
+  font-size: var(--font-size-h1);
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.services-section {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 11rem;
+  grid-template-areas:
+    "graphic graphic ui-ux apps photography photography"
+    "graphic graphic illus illus motion motion";
+  gap: 1.25rem;
+}
+.box {
+  border-radius: var(--radius-8);
+  border-radius: var(--radius-8);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.box h3 {
+  color: var(--clr-neutral-0);
+  font-size: var(--font-size-h3);
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+.graphic-design {
+  background-color: #3e54a3;
+  grid-area: graphic;
+}
+.grp-img {
+  width: 8rem;
+  height: 12rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.grp-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.ui-ux {
+  background-color: var(--clr-summer-yellow-500);
+  grid-area: ui-ux;
+}
+.ui-ux-img {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.ui-ux-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.apps {
+  background-color: var(--clr-pink-500);
+  grid-area: apps;
+}
+.apps-img {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.apps-img img {
+  width: 100%;
+  height: 100%;
+}
+.photography {
+  background-color: var(--clr-cyan-500);
+  grid-area: photography;
+}
+.pht-img {
+  width: 10rem;
+  height: 4rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.pht-img img {
+  width: 100%;
+  height: 100%;
+}
+.illustrations {
+  background-color: var(--clr-light-red-500);
+  grid-area: illus;
+}
+.illus-img {
+  width: 8rem;
+  height: 4rem;
+
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.illus-img img {
+  width: 100%;
+  height: 100%;
+}
+.motion {
+  background-color: var(--clr-dark-purple-500);
+  grid-area: motion;
+}
+.motion-img {
+  width: 8rem;
+  height: 4rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}
+.motion-img img {
+  width: 100%;
+  height: 100%;
+}
+.about {
+  width: 100%;
+  height: auto;
+  max-width: 70rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-img {
+  max-width: 27rem;
+  height: auto;
+  flex-shrink: 0;
+}
+.about-img img {
+  width: 100%;
+  height: 100%;
+}
+.about-content {
+  text-align: left;
+  max-width: 34rem;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.about-content h1 {
+  font-size: var(--font-size-h1);
+  padding-block-end: 1rem;
+  line-height: var(--line-height-130);
+}
+.about-content p {
+  line-height: var(--line-height-150);
+  font-family: var(--font-family-Jakarta);
+  font-size: var(--font-size-base);
+  color: var(--clr-neutral-400);
+  margin-bottom: 2rem;
+}
+.about-content button {
+  padding: 0.8rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  background-color: var(--clr-summer-yellow-500);
+  color: var(--clr-neutral-0);
+  border: none;
+}
+.my-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  overflow: hidden;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.card {
+  max-width: clamp(16.875rem, calc(15.086rem + 7.634vw), 18.75rem);
+}
+.card4,
+.card5 {
+  display: none;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.buttons button {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--clr-neutral-900);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.buttons button:hover {
+  background-color: var(--clr-galactic-blue-500);
+}
+.footer {
+  max-width: 70rem;
+
+  border-radius: var(--radius-4);
+  padding-inline: 3rem;
+  gap: 3rem;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.footer-content {
+  text-align: center;
+  background-color: var(--clr-neutral-900);
+  padding: 4rem 5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content h1 {
+  font-size: var(--font-size-h1);
+  color: var(--clr-neutral-200);
+  text-align: center;
+}
+.footer-text p {
+  font-size: var(--font-size-base);
+  color: var(--clr-neutral-200);
+  opacity: 0.5;
+}
+.footer button {
+  padding: 0.8rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  background-color: var(--clr-summer-yellow-500);
+  color: var(--clr-neutral-0);
+  border: none;
+  white-space: nowrap;
+}
+.footer-end {
+  max-width: 70rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-end button {
+  padding: 0.8rem 2.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  background-color: var(--clr-summer-yellow-500);
+  color: var(--clr-neutral-0);
+  border: none;
+  white-space: nowrap;
+}
+@media screen and (max-width: 768px) {
+  .hero {
+    padding-inline: 2rem;
+  }
+  .hero-content p {
+    opacity: 0.4;
+  }
+  .services-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 11rem;
+    grid-template-areas:
+      "graphic graphic ui-ux apps "
+      "graphic graphic illus illus"
+      "photography photography motion motion";
+    gap: 1.25rem;
+  }
+  .about {
+    max-width: 48rem;
+  }
+  .about-img {
+    width: 50%;
+    height: 50%;
+    gap: 1rem;
+    margin: auto;
+  }
+  .footer {
+    max-width: 48rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-content {
+    max-width: 43rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem 2.5rem;
+  }
+
+  .footer-text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .hero {
+    padding-inline: 1rem;
+    gap: 2.5rem;
+  }
+  .hero-content p {
+    opacity: 0.4;
+  }
+  .services-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 11.5rem;
+    grid-template-areas:
+      "graphic graphic "
+      "ui-ux apps "
+      "illus illus"
+      "photography photography"
+      "motion motion";
+    gap: 1rem;
+  }
+  .graphic-design {
+    grid-area: graphic;
+  }
+  .grp-img {
+    width: 4rem;
+    height: 6rem;
+
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+  .grp-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about {
+    max-width: 18rem;
+  }
+  .about-img {
+    width: 50%;
+    height: 50%;
+    gap: 1rem;
+    margin: auto;
+  }
+  .footer {
+    max-width: 23rem;
+  }
+  .footer-content {
+    max-width: 23rem;
+    width: 100%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+  .footer-end {
+    max-width: 23rem;
+    width: 100%;
+    padding-inline: 1rem;
+  }
+}
